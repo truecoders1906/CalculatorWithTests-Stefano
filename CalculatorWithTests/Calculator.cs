@@ -5,6 +5,9 @@ namespace CalculatorWithTests
 {
     public class Calculator
     {
-        throw new NotImplementedException();
+        public decimal GetSum()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
