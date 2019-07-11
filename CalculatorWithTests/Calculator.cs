@@ -9,5 +9,10 @@ namespace CalculatorWithTests
         {
             throw new NotImplementedException();
         }
+
+        public decimal GetDifference()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

@@ -15,9 +15,6 @@ namespace CalculatoraTest
         [InlineData(-10, -10, 7.5)]
         [InlineData(10, 10, 20)]
         [InlineData(100, 1000, 1100)]
-
-
-
         public void ShouldCalculateSum(decimal number1, decimal number2, decimal expected)
         {
             // Arrange
@@ -25,6 +22,25 @@ namespace CalculatoraTest
 
             // Act
             decimal actual = Calc.GetSum();
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+        [Theory]
+        [InlineData(0, 0, 0)]
+        [InlineData(5, -5, 10)]
+        [InlineData(2.5, 2.5, 0)]
+        [InlineData(10, -2.5, 12.5)]
+        [InlineData(-10, -10, 0)]
+        [InlineData(10, 10, 0)]
+        [InlineData(1100, 1000, 100)]
+        public void ShouldCalculateDifference(decimal number1, decimal number2, decimal expected)
+        {
+            // Arrange
+            Calculator Calc = new Calculator();
+
+            // Act
+            decimal actual = Calc.GetDifference();
 
             // Assert
             Assert.Equal(expected, actual);
