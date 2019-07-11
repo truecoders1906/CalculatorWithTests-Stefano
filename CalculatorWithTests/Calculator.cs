@@ -14,5 +14,10 @@ namespace CalculatorWithTests
         {
             throw new NotImplementedException();
         }
+
+        public decimal GetResults()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

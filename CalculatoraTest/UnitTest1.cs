@@ -26,6 +26,7 @@ namespace CalculatoraTest
             // Assert
             Assert.Equal(expected, actual);
         }
+
         [Theory]
         [InlineData(0, 0, 0)]
         [InlineData(5, -5, 10)]
@@ -41,6 +42,26 @@ namespace CalculatoraTest
 
             // Act
             decimal actual = Calc.GetDifference();
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
+
+        [Theory]
+        [InlineData(0, 5, 0)]
+        [InlineData(5, -5, -25)]
+        [InlineData(2.5, 2.5, 6.26)]
+        [InlineData(10, -2.5, -25)]
+        [InlineData(-10, -10, 100)]
+        [InlineData(10, 10, 100)]
+        [InlineData(1100, 1000, 10000)]
+        public void ShouldCalculateResults(decimal number1, decimal number2, decimal expected)
+        {
+            // Arrange
+            Calculator Calc = new Calculator();
+
+            // Act
+            decimal actual = Calc.GetResults();
 
             // Assert
             Assert.Equal(expected, actual);
