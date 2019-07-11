@@ -31,7 +31,6 @@ namespace CalculatorWithTests
 
         public int GetFactorial(int number)
         {
-
             int results = 1;
 
             for (int i = number; i >= 1; i--)
