@@ -1,8 +1,10 @@
-﻿
+﻿using System;
+using System.Linq;
+
 namespace CalculatorWithTests
 {
-    class Calculator
+    public class Calculator
     {
-        
+        throw new NotImplementedException();
     }
 }

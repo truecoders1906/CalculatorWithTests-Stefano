@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Linq;
+
 
 namespace CalculatorWithTests
 {
@@ -6,7 +8,7 @@ namespace CalculatorWithTests
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, world!");
+            
         }
     }
 }
