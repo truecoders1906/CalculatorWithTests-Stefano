@@ -5,29 +5,40 @@ namespace CalculatorWithTests
 {
     public class Calculator
     {
-        public decimal GetSum()
+        public decimal GetSum(decimal number1, decimal number2)
         {
-            throw new NotImplementedException();
+            return number1 + number2;
         }
 
-        public decimal GetDifference()
+        public decimal GetDifference(decimal number1, decimal number2)
         {
-            throw new NotImplementedException();
+            return number1 - number2;
         }
 
-        public decimal GetResults()
+        public decimal GetResults(decimal number1, decimal number2)
         {
-            throw new NotImplementedException();
+            return number1 * number2;
         }
 
-        public decimal GetQuotient()
+        public decimal GetQuotient(decimal number1, decimal number2)
         {
-            throw new NotImplementedException();
+            if (number2 == 0)
+            {
+                return 0;
+            }
+            return number1 / number2;
         }
 
-        public decimal GetFactorial()
+        public int GetFactorial(int number)
         {
-            throw new NotImplementedException();
-        }
+
+            int results = 1;
+
+            for (int i = number; i >= 1; i--)
+            {
+                results *= i;
+            }
+            return results;
+        }     
     }
 }

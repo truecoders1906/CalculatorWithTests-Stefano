@@ -12,7 +12,7 @@ namespace CalculatoraTest
         [InlineData(5, -5, 0)]
         [InlineData(2.5, 2.5, 5)]
         [InlineData(10, -2.5, 7.5)]
-        [InlineData(-10, -10, 7.5)]
+        [InlineData(-10, -10, -20)]
         [InlineData(10, 10, 20)]
         [InlineData(100, 1000, 1100)]
         public void ShouldCalculateSum(decimal number1, decimal number2, decimal expected)
@@ -21,7 +21,7 @@ namespace CalculatoraTest
             Calculator Calc = new Calculator();
 
             // Act
-            decimal actual = Calc.GetSum();
+            decimal actual = Calc.GetSum(number1, number2);
 
             // Assert
             Assert.Equal(expected, actual);
@@ -41,7 +41,7 @@ namespace CalculatoraTest
             Calculator Calc = new Calculator();
 
             // Act
-            decimal actual = Calc.GetDifference();
+            decimal actual = Calc.GetDifference(number1, number2);
 
             // Assert
             Assert.Equal(expected, actual);
@@ -50,18 +50,18 @@ namespace CalculatoraTest
         [Theory]
         [InlineData(0, 5, 0)]
         [InlineData(5, -5, -25)]
-        [InlineData(2.5, 2.5, 6.26)]
+        [InlineData(2.5, 2.5, 6.25)]
         [InlineData(10, -2.5, -25)]
         [InlineData(-10, -10, 100)]
         [InlineData(10, 10, 100)]
-        [InlineData(1100, 1000, 10000)]
+        [InlineData(1100, 1000, 1100000)]
         public void ShouldCalculateResults(decimal number1, decimal number2, decimal expected)
         {
             // Arrange
             Calculator Calc = new Calculator();
 
             // Act
-            decimal actual = Calc.GetResults();
+            decimal actual = Calc.GetResults(number1, number2);
 
             // Assert
             Assert.Equal(expected, actual);
@@ -81,24 +81,24 @@ namespace CalculatoraTest
             Calculator Calc = new Calculator();
 
             // Act
-            decimal actual = Calc.GetQuotient();
+            decimal actual = Calc.GetQuotient(number1, number2);
 
             // Assert
             Assert.Equal(expected, actual);
         }
-
+        
         [Theory]
         [InlineData(3, 6)]
         [InlineData(5, 120)]
         [InlineData(8, 40320)]
         [InlineData(10, 3628800)]
-        public void ShouldCalculateFactorial(decimal number1, decimal expected)
+        public void ShouldCalculateFactorial(int number, int expected)
         {
             // Arrange
             Calculator Calc = new Calculator();
 
             // Act
-            decimal actual = Calc.GetFactorial();
+            int actual = Calc.GetFactorial(number);
 
             // Assert
             Assert.Equal(expected, actual);
