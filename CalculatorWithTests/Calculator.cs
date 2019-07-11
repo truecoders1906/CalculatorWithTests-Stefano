@@ -19,5 +19,10 @@ namespace CalculatorWithTests
         {
             throw new NotImplementedException();
         }
+
+        public decimal GetQuotient()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

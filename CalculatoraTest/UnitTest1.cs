@@ -66,5 +66,25 @@ namespace CalculatoraTest
             // Assert
             Assert.Equal(expected, actual);
         }
+
+        [Theory]
+        [InlineData(0, 0, 0)]
+        [InlineData(5, -5, -1)]
+        [InlineData(2.5, 2.5, 1)]
+        [InlineData(10, -2.5, -4)]
+        [InlineData(-10, -10, 1)]
+        [InlineData(-100, 10, -10)]
+        [InlineData(1100, 1000, 1.1)]
+        public void ShouldCalculateQuotient(decimal number1, decimal number2, decimal expected)
+        {
+            // Arrange
+            Calculator Calc = new Calculator();
+
+            // Act
+            decimal actual = Calc.GetQuotient();
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
     }
 }
