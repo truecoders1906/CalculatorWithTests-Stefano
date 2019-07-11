@@ -86,5 +86,22 @@ namespace CalculatoraTest
             // Assert
             Assert.Equal(expected, actual);
         }
+
+        [Theory]
+        [InlineData(3, 6)]
+        [InlineData(5, 120)]
+        [InlineData(8, 40320)]
+        [InlineData(10, 3628800)]
+        public void ShouldCalculateFactorial(decimal number1, decimal expected)
+        {
+            // Arrange
+            Calculator Calc = new Calculator();
+
+            // Act
+            decimal actual = Calc.GetFactorial();
+
+            // Assert
+            Assert.Equal(expected, actual);
+        }
     }
 }

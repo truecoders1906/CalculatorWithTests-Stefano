@@ -24,5 +24,10 @@ namespace CalculatorWithTests
         {
             throw new NotImplementedException();
         }
+
+        public decimal GetFactorial()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
